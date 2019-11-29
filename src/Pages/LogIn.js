@@ -6,7 +6,8 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  View
+  View,
+  Alert
 } from "react-native";
 import { Link } from "react-router-native";
 
@@ -48,16 +49,19 @@ class Login extends Component {
         />
         <View style={styles.btnWrapper}>
           <Link to={this._to} component={this._renderLink}>
-            <Text style={this._labelStyle}>Register</Text>
+            <Text style={this._labelStyle} onPress={this._onPress}>Register</Text>
           </Link>
         </View>
       </SafeAreaView>
     );
   }
 
+  _onPress = () => {
+    Alert.alert("Welcome user " + this.state.matricno);
+  }
   get _to() {
     return {
-      pathname: "/Progress",
+      pathname: "/Confirm",
       state: {
         user: this.state
       }
@@ -72,7 +76,7 @@ class Login extends Component {
   get _labelStyle() {
     return {
       ...styles.btnLabel,
-      color: this._canLogin ? "rgb(0, 122, 255)" : "#eeeeee"
+      color: this._canLogin ? "rgb(255, 160, 44)" : "#eeeeee"
     };
   }
 }
@@ -81,13 +85,19 @@ export default Login;
 
 const styles = StyleSheet.create({
   btnLabel: {
-    fontSize: 16,
-    color: "rgb(0, 122, 255)"
+    fontSize: 25,
+    color: "rgb(255, 160, 44)",
   },
   btnWrapper: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 32
+    backgroundColor: "yellow",
+    marginVertical: 8,
+    borderRadius: 15,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: "yellow",
+    width: 200
   },
   brand: {
     alignItems: "center",
@@ -103,7 +113,12 @@ const styles = StyleSheet.create({
     borderColor: "#f9f9f9",
     borderWidth: 2,
     padding: 16,
-    width: 343
+    width: 343,
+    elevation:4,
+    shadowOffset: { width: 5, height: 5 },
+    shadowColor: "grey",
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
   },
   logo: {
     width: 80,

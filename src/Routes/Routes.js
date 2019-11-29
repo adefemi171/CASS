@@ -1,26 +1,25 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import LogIn from '../Pages/LogIn';
+import PanicButton from '../Pages/Alert';
+import Profile from '../Pages/Profile';
+import SplashScreen from '../Pages/Confirm';
 
 
-
-import LogIn from '../pages/LogIn';
-import Progress from '../pages/Progress';
-import PanicButton from '../pages/Alert';
-import Profile from '../pages/Profile'
 const RootStack = createStackNavigator({
 
     LogIn:{
         screen: LogIn,
     },
-    Progress: {
-        screen: Progress,
-    },
-    PanicButton:{
-        screen: PanicButton
-    },
-    Profile: {
-        screen: Profile
-    },
+    // SplashScreen: {
+    //     screen: SplashScreen,
+    // },
+    // PanicButton:{
+    //     screen: PanicButton
+    // },
+    // Profile: {
+    //     screen: Profile
+    // },
     // {
     //     initialRouteName: 'SplashScreen',
     // }
