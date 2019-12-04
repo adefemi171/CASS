@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import LogIn from '../Pages/LogIn';
 import PanicButton from '../Pages/Alert';
 import Profile from '../Pages/Profile';
-import SplashScreen from '../Pages/Confirm';
+import Confirm from '../Pages/Confirm';
 
 
 const RootStack = createStackNavigator({
@@ -11,9 +11,9 @@ const RootStack = createStackNavigator({
     LogIn:{
         screen: LogIn,
     },
-    // SplashScreen: {
-    //     screen: SplashScreen,
-    // },
+    Confirm: {
+        screen: Confirm,
+    },
     // PanicButton:{
     //     screen: PanicButton
     // },

@@ -37,7 +37,7 @@ class Login extends Component {
     return (
       <SafeAreaView style={styles.root}>
         <View style={styles.brand}>
-          <Image style={styles.logo} source={require("../../assets/images/bot.png")} />
+          <Image style={styles.logo} source={require("../../assets/images/wrapper.png")} />
           <Text style={styles.name}>CASS</Text>
         </View>
         <TextInput
@@ -49,16 +49,16 @@ class Login extends Component {
         />
         <View style={styles.btnWrapper}>
           <Link to={this._to} component={this._renderLink}>
-            <Text style={this._labelStyle} onPress={this._onPress}>Register</Text>
+            <Text style={this._labelStyle} onPress={() => this.props.navigation.navigate('Confirm')}>Register</Text>
           </Link>
         </View>
       </SafeAreaView>
     );
   }
 
-  _onPress = () => {
-    Alert.alert("Welcome user " + this.state.matricno);
-  }
+  // _onPress = () => {
+  //   this.props.navigation.navigate('Confirm');
+  // }
   get _to() {
     return {
       pathname: "/Confirm",
