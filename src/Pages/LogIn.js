@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import {
-  Image,
+  ImageBackground,
   SafeAreaView,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  View,
-  Alert
+  View
 } from "react-native";
+import { Card } from "react-native-elements";
 import { Link } from "react-router-native";
 
 const hitSlop = { top: 24, right: 24, bottom: 24, left: 24 };
@@ -36,10 +36,14 @@ class Login extends Component {
     const { matricno } = this.state;
     return (
       <SafeAreaView style={styles.root}>
-        <View style={styles.brand}>
-          <Image style={styles.logo} source={require("../../assets/images/wrapper.png")} />
-          <Text style={styles.name}>CASS</Text>
-        </View>
+          <View style={styles.brand}>
+            <ImageBackground style={styles.logo} source={require("../../assets/images/wrapper.png")} resizeMode="cover">
+              <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+                <Text style={styles.name}>CASS</Text>
+              </View>
+            </ImageBackground>
+          </View>
+
         <TextInput
           autoCapitalize="none"
           style={styles.input}
@@ -121,13 +125,20 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
   },
   logo: {
-    width: 80,
-    height: 112
+    width: 800,
+    height: 400,
+    top: -400,
+    position: "absolute"
   },
   name: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "800",
-    marginTop: 16
+    marginTop: 16,
+    position: "absolute",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "yellow"
+
   },
   root: {
     flex: 1,

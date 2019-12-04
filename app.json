@@ -23,8 +23,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android":{
+      "package": "com.fitech.CASS"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fitech.CASS"
     }
   }
 }
