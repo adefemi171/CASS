@@ -1,25 +1,29 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import LogIn from '../Pages/LogIn';
-import PanicButton from '../Pages/Alert';
+import ProgressBar from '../Pages/ProgressBar';
+import SendAlert from '../Pages/SendAlert';
+import ReceiveAlert from '../Pages/ReceiveAlert';
 import Profile from '../Pages/Profile';
-import Confirm from '../Pages/Confirm';
 
 
 const RootStack = createStackNavigator({
 
-    LogIn:{
-        screen: LogIn,
-    },
-    Confirm: {
-        screen: Confirm,
-    },
-    // PanicButton:{
-    //     screen: PanicButton
+    // LogIn:{
+    //     screen: LogIn,
     // },
-    // Profile: {
-    //     screen: Profile
+    // ProgressBar: {
+    //     screen: ProgressBar,
     // },
+    SendAlert:{
+        screen: SendAlert,
+    },
+    // ReceiveAlert: {
+    //     screen: ReceiveAlert,
+    // },
+    Profile: {
+        screen: Profile
+    },
     // {
     //     initialRouteName: 'SplashScreen',
     // }
