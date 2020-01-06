@@ -29,7 +29,7 @@ export default class ProgressBar extends Component {
                 progress += Math.random() / 5;
                 if (progress > 1){
                     progress = 1;
-                    this.props.navigation.navigate('Alert');
+                    this.props.navigation.navigate('Profile');
                 }
                 this.setState({ progress });
             }, 500);

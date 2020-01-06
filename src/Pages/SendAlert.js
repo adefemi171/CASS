@@ -8,7 +8,7 @@ export default class Alert extends React.Component {
     render() {
         return (
             <View style={styles.Container}>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Profile')}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ReceiveAlert')}>
                     <Svg height="80%" width="95%" viewBox="0 0 180 180" preserveAspectRatio="none">
                         <Circle
                             cx="90"

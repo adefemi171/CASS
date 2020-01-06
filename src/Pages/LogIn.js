@@ -59,7 +59,7 @@ class Login extends Component {
         />
         <View style={styles.btnWrapper}>
           <Link to={this._to} component={this._renderLink}>
-            <Text style={this._labelStyle} onPress={() => this.props.navigation.navigate('ProgressBar')}>Register</Text>
+            <Text style={this._labelStyle} onPress={() => this.props.navigation.navigate('Profile')}>Register</Text>
           </Link>
         </View>
       </SafeAreaView>

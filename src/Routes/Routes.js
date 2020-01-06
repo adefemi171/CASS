@@ -9,18 +9,18 @@ import Profile from '../Pages/Profile';
 
 const RootStack = createStackNavigator({
 
-    // LogIn:{
-    //     screen: LogIn,
-    // },
+    LogIn:{
+        screen: LogIn,
+    },
     // ProgressBar: {
     //     screen: ProgressBar,
     // },
     SendAlert:{
         screen: SendAlert,
     },
-    // ReceiveAlert: {
-    //     screen: ReceiveAlert,
-    // },
+    ReceiveAlert: {
+        screen: ReceiveAlert,
+    },
     Profile: {
         screen: Profile
     },
